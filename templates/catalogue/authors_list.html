@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>All books authors at this digital library:</h1>
+  {% if authors_list %}
+    <ul>
+      {% for author in authors_list %}
+        <li>
+          {{ author.first_name }} 
+          {{ author.last_name }} 
+          (pseudonym: {{ author.pseudonym }})
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <a href="{% url 'catalogue:author-create' %}">Add new author</a>
+{% endblock %}

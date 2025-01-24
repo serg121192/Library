@@ -1,0 +1,38 @@
+<ul class="sidebar-nav">
+  {% if user.is_authenticated %}
+    <li>Hello,
+      <strong>{{ user.username }}!</strong>
+      <br>
+    </li>
+    <li>
+      <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Logout" class="btn btn-primary">
+      </form>
+    </li>
+  {% else %}
+    <li>
+      <a href="{% url 'catalogue:author-create' %}" class="btn btn-success">
+        Sign up
+      </a>
+    </li>
+    <br>
+    <li>
+      <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+    </li>
+  {% endif %}
+  <br>
+
+  <li>
+    <a href="{% url 'index' %}">Home</a>
+  </li>
+  <li>
+    <a href="{% url 'catalogue:authors-list' %}">All authors</a>
+  </li>
+  <li>
+    <a href="{% url 'catalogue:books-list' %}">All books</a>
+  </li>
+  <li>
+    <a href="{% url 'catalogue:literary-formats-list' %}">All literary formats</a>
+  </li>
+</ul>

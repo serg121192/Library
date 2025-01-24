@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Full information about "{{ book.title }}"</h2>
+  <p>
+    <a href="{% url 'catalogue:book-update' book.id %}" style="margin-right: 20px;">Edit</a>
+    {% if user.username in book_authors %}
+      <a href="{% url 'catalogue:book-delete' book.id %}">Delete</a>
+    {% endif %}
+  </p>
+  <hr>
+  <p>Price: {{ book.price }}</p>
+  <p>Format: {{ book.format }}</p>
+  <h3><strong>Authors:</strong></h3>
+  {% if book.authors %}
+    {% for author in book.authors.all %}
+      <hr>
+      <p>{{ author.id }}</p>
+      <p><strong>{{ author.first_name }} {{ author.last_name }}</strong></p>
+      {% if author.pseudonym %}
+        (Pseudonym: {{ author.pseudonym }})
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <p>Book has no authors!</p>
+  {% endif %}
+{% endblock %}

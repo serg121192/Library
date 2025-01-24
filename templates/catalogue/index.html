@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+  <title>Awesome library</title>
+{% endblock %}
+
+{% block content %}
+  <h1>Welcome to the Greatest Library</h1>
+  <h3>Library content:</h3>
+  <ul>
+    <li>
+      Num books: {{ num_books }}
+    </li>
+    <li>
+      Num authors {{ num_authors }}
+    </li>
+    <li>
+      Num of Literary Formats: {{ literary_formats_list }}
+    </li>
+  </ul>
+  <p>
+    User visits: {{ num_visits }} time{{ num_visits|pluralize }}
+  </p>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% block content %}
+  <h1>The list of existent Books</h1>
+  <br>
+  <form action="" method="get" class="form-inline">
+    {{ search_form|crispy }}
+    <input type="submit" value="Search" class="btn btn-info">
+  </form>
+  <br>
+  {% if books_list %}
+    <ul>
+        {% for book in books_list %}
+          <li>
+            <a href="{% url 'catalogue:book-detail' book.id %}">
+              {{ book.title }}
+              ({{ book.price }},
+              {{ book.format }})
+            </a>
+          </li>
+        {% endfor %}
+    </ul>
+  {% else %}
+    <p>No Books Found in Library</p>
+  {% endif %}
+  <button class="btn btn-success custom-button">
+  <a href="{% url 'catalogue:book-create' %}">Create a New Book</a>
+  </button>
+  <br>
+  <br>
+{% endblock %}

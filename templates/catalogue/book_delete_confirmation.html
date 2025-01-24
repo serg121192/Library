@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Deleting Book</h1>
+  <p><strong>WARNING!</strong> You're going to delete a book: <strong>{{ book.name }}</strong></p>
+  <p>Pay attention that this action leads to delete book for related authors too.</p>
+  <p><i>Press <strong>"Delete"</strong> button to confirm a book deleting process.</i></p>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+  </form>
+{% endblock %}

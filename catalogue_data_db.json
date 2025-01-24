@@ -1,0 +1,184 @@
+[
+{
+    "model": "catalogue.literaryformat",
+    "pk": 1,
+    "fields": {
+        "name": "poetry"
+    }
+},
+{
+    "model": "catalogue.literaryformat",
+    "pk": 2,
+    "fields": {
+        "name": "novel"
+    }
+},
+{
+    "model": "catalogue.literaryformat",
+    "pk": 3,
+    "fields": {
+        "name": "drama"
+    }
+},
+{
+    "model": "catalogue.literaryformat",
+    "pk": 4,
+    "fields": {
+        "name": "biography"
+    }
+},
+{
+    "model": "catalogue.literaryformat",
+    "pk": 5,
+    "fields": {
+        "name": "sci-fi"
+    }
+},
+{
+    "model": "catalogue.literaryformat",
+    "pk": 6,
+    "fields": {
+        "name": "fiction"
+    }
+},
+{
+    "model": "catalogue.literaryformat",
+    "pk": 7,
+    "fields": {
+        "name": "horror"
+    }
+},
+{
+    "model": "catalogue.author",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$WnYU9vRFMPa2ZOlz5L4XyT$bHOMnZRGH9ZCtFQFX28bLKlhOVDxt0ZOWJI3drT0h3U=",
+        "last_login": "2025-01-24T07:49:37.567Z",
+        "is_superuser": true,
+        "username": "Admin_user",
+        "first_name": "Joanne",
+        "last_name": "Rowling",
+        "email": "admin@lib.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-12-06T08:25:17Z",
+        "pseudonym": "Red Fox Joe",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalogue.author",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$5xIcIVvCPav3TX6cNHl97K$bJLGrd3utFHaMWpjaaeKDTBsQtOrlZ9eGmQFjm7i/ns=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "taras_shev",
+        "first_name": "Taras",
+        "last_name": "Shevchenko",
+        "email": "taras@shev.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-12-06T09:04:35Z",
+        "pseudonym": "sheva",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalogue.author",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$kq6wecZqIORnC8hSwQkPGF$WFWWKSuICLVOV7GG+9QOOsn6d69kG1UBAr99Js9YhLY=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "john_weak",
+        "first_name": "John",
+        "last_name": "Week",
+        "email": "jw@theboogyman.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-12-11T13:11:03Z",
+        "pseudonym": "boogyman",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalogue.author",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$CxxbOawDjN7TMJx6ZDge68$tNG+BkdLZuT74w09EXvPjRZpYdQIGi+Wl7kgSBmMR0w=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "HP",
+        "first_name": "Harry",
+        "last_name": "Potter",
+        "email": "hp@harry.potter.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-12-11T13:12:03Z",
+        "pseudonym": "harry_potter",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalogue.author",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$F0JffKbEcsbsHmJJWnPpA3$k5JL/fV85G46bi0bpOlL78C079jFmhzl0BV+vxxH4pY=",
+        "last_login": "2024-12-19T13:36:03.625Z",
+        "is_superuser": false,
+        "username": "test1",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-12-19T13:35:53.585Z",
+        "pseudonym": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalogue.book",
+    "pk": 1,
+    "fields": {
+        "title": "Harry Potter and the Goblet of Fire",
+        "price": "10.99",
+        "format": 2,
+        "authors": [
+            1
+        ]
+    }
+},
+{
+    "model": "catalogue.book",
+    "pk": 2,
+    "fields": {
+        "title": "Kobzar",
+        "price": "20.99",
+        "format": 1,
+        "authors": [
+            2
+        ]
+    }
+},
+{
+    "model": "catalogue.book",
+    "pk": 3,
+    "fields": {
+        "title": "Harry Potter and The Chamber of Secrets",
+        "price": "10.99",
+        "format": 2,
+        "authors": [
+            1,
+            4,
+            3
+        ]
+    }
+}
+]
