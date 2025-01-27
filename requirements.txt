@@ -148,7 +148,6 @@ tzdata==2024.1
 ujson==5.9.0
 urllib3==2.2.1
 uvicorn==0.22.0
-vboxapi==1.0
 virtualenv==20.25.0
 watchdog==4.0.0
 watchfiles==0.21.0
