@@ -1,3 +1,4 @@
+from django.conf.urls.static import static
 from django.urls import path
 from django.views.generic import RedirectView
 
@@ -15,7 +16,9 @@ from catalogue.views import (
     LiteraryFormatUpdateView,
     LiteraryFormatDeleteView, BookCreateView,
 )
-
+from library.settings.prod import *
+from library.settings.base import *
+from library.settings.dev import *
 
 urlpatterns = [
     path('', index, name='index'),
@@ -31,7 +34,7 @@ urlpatterns = [
     path("authors/", AuthorsListView.as_view(), name="authors-list"),
     path("authors/create/", AuthorCreateView.as_view(), name="author-create"),
     path("favicon.ico", RedirectView.as_view(url="/static/favicon.ico")),
-]
+] + static(STATIC_URL, document_root=STATIC_ROOT)
 
 
 app_name = "catalogue"
