@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.generic import RedirectView
 
 from catalogue.views import (
     index,
@@ -29,6 +30,7 @@ urlpatterns = [
     path("books/<int:pk>/delete/", BookDeleteView.as_view(), name="book-delete"),
     path("authors/", AuthorsListView.as_view(), name="authors-list"),
     path("authors/create/", AuthorCreateView.as_view(), name="author-create"),
+    path("favicon.ico", RedirectView.as_view(url="/static/favicon.ico")),
 ]
 
 
