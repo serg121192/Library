@@ -14,11 +14,12 @@ from catalogue.views import (
     AuthorCreateView,
     LiteraryFormatCreateView,
     LiteraryFormatUpdateView,
-    LiteraryFormatDeleteView, BookCreateView,
+    LiteraryFormatDeleteView,
 )
+
+
 from library.settings.prod import *
-from library.settings.base import *
-from library.settings.dev import *
+
 
 urlpatterns = [
     path('', index, name='index'),
